@@ -1,0 +1,14 @@
+public static Node removeDuplicates(Node head){
+    //Chesia code start
+    if(head != null){
+        Node link = head;
+        while(link.next != null){
+            if(link.data == link.next.data)
+                link.next = link.next.next;
+            else
+                link = link.next;
+        }
+    }
+    return head;
+    //Chesia code End
+  }

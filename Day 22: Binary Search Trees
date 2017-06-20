@@ -1,0 +1,10 @@
+static int getHeight(Node root){
+      //Chesia Start code
+        if(root == null)
+            return -1;
+        
+        int left  = 1 + getHeight(root.left);
+        int right = 1 + getHeight(root.right);
+        return Math.Max(left,right);
+    }
+//Chesia end code

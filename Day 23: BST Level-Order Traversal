@@ -1,0 +1,14 @@
+	static void levelOrder(Node root){
+  		//Start Chesia code here
+        Queue<Node> q = new Queue<Node>();
+        q.Enqueue(root);
+        while(q.Count > 0){
+            var next = q.Dequeue();
+            Console.Write(next.data + " ");
+            if(next.left != null)
+                q.Enqueue(next.left);
+            if(next.right != null)
+                q.Enqueue(next.right);
+        }
+        // End Chesia Code
+    }
